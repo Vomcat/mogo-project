@@ -1,0 +1,13 @@
+{
+  "name": "mogo",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "scss": "node-sass --watch scss -o "
+  },
+  "author": "Weronika K.",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
