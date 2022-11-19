@@ -1,0 +1,39 @@
+@mixin respond-from($size) {
+  @if $size == mobile {
+    @media (min-width: $breakpoint-mobile) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media (min-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $size == laptop {
+    @media (min-width: $breakpoint-laptop) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-to($size) {
+  @if $size == mobile {
+    @media (max-width: #{$breakpoint-mobile - 1px}) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media (max-width: #{$breakpoint-tablet - 1px}) {
+      @content;
+    }
+  } @else if $size == laptop {
+    @media (max-width: #{$breakpoint-laptop - 1px}) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media (max-width: #{$breakpoint-desktop - 1px}) {
+      @content;
+    }
+  }
+}
