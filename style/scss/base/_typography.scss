@@ -1,0 +1,60 @@
+h1,
+h2 {
+  color: $color-white;
+}
+
+h1 {
+  font-family: $font-family-primary;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @include respond-from(tablet) {
+    font-size: 70px;
+  }
+
+  @include respond-from(laptop) {
+    font-size: 150px;
+  }
+
+  &.dark {
+    color: $font-color-primary-dark;
+  }
+}
+
+h2 {
+  font-family: $font-family-tertiary;
+
+  @include respond-from(tablet) {
+    font-size: 70px;
+  }
+
+  @include respond-from(laptop) {
+    font-size: 77px;
+  }
+}
+
+h3 {
+  font-family: $font-family-primary;
+
+  @include respond-from(laptop) {
+    font-size: 30px;
+  }
+}
+
+h4 {
+  font-family: $font-family-primary;
+  color: $font-color-primary-dark;
+}
+
+p {
+  font-family: $font-family-secondary;
+  color: $font-color-secondary-light;
+
+  @include respond-from(desktop) {
+    font-size: 15px;
+  }
+
+  &.font-italic {
+    font-style: italic;
+  }
+}
