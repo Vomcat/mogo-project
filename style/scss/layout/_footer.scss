@@ -1,0 +1,57 @@
+.footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 12px;
+
+  @include respond-from(laptop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  p {
+    a {
+      color: $color-primary;
+      transition: 0.9s;
+
+      &:hover {
+        color: darken($color-primary, 30%);
+      }
+    }
+
+    @include respond-to(laptop) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__subscirbe-form {
+    @include respond-from(laptop) {
+      width: 380px;
+    }
+  }
+
+  &__input-wrapper {
+    display: flex;
+    background-color: $color-white;
+  }
+
+  &__input {
+    outline: none;
+    border: 1px solid $color-grey-light;
+    font-family: $font-family-secondary;
+    color: $color-grey-light;
+    flex-grow: 1;
+    padding: 0 10px;
+
+    @include respond-from(laptop) {
+      padding: 0 12px;
+    }
+
+    &::placeholder {
+      font-family: inherit;
+      color: $color-grey-light;
+    }
+  }
+}
