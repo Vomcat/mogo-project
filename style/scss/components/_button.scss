@@ -1,0 +1,29 @@
+.button {
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $font-family-primary;
+  color: $color-white;
+  font-weight: 700;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  @include respond-from(laptop) {
+    font-size: 14px;
+    padding: 12px 28px;
+  }
+
+  &--primary {
+    border: 2px solid $color-white;
+    background-color: transparent;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-primary;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-quaternary;
+  }
+}
