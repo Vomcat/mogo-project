@@ -91,6 +91,7 @@ ul {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 blockquote,
@@ -114,4 +115,6 @@ table {
 input {
   -webkit-appearance: none;
   border-radius: 0;
+  font-family: $font-family-secondary;
+  color: $color-grey-light;
 }

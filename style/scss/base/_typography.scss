@@ -7,6 +7,7 @@ h1 {
   font-family: $font-family-primary;
   font-weight: 700;
   text-transform: uppercase;
+  font-size: 40px;
 
   @include respond-from(tablet) {
     font-size: 70px;
@@ -15,17 +16,14 @@ h1 {
   @include respond-from(laptop) {
     font-size: 150px;
   }
-
-  &.dark {
-    color: $font-color-primary-dark;
-  }
 }
 
 h2 {
   font-family: $font-family-tertiary;
+  font-size: 23px;
 
   @include respond-from(tablet) {
-    font-size: 70px;
+    font-size: 43px;
   }
 
   @include respond-from(laptop) {
@@ -49,12 +47,12 @@ h4 {
 p {
   font-family: $font-family-secondary;
   color: $font-color-secondary-light;
+  font-size: 15px;
+}
 
-  @include respond-from(desktop) {
-    font-size: 15px;
-  }
-
-  &.font-italic {
-    font-style: italic;
-  }
+.title-p {
+  font-family: $font-family-primary;
+  color: $font-color-primary-dark;
+  font-size: 14px;
+  text-transform: uppercase;
 }
