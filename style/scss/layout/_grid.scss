@@ -1,0 +1,9 @@
+.grid-container {
+  display: grid;
+  grid:
+    ". navbar ." 0
+    "header header header"
+    ". services ."
+    ". ourTeam ."
+    ". footer ." auto / minmax(16px, 1fr) minmax(290px, 1200px) minmax(16px, 1fr);
+}
