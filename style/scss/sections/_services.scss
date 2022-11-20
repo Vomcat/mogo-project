@@ -3,8 +3,12 @@
 
   &__icon-boxes {
     display: grid;
-    grid: auto / 1fr;
+    grid: auto / auto;
     gap: 30px;
+
+    @include respond-to(tablet) {
+      justify-content: center;
+    }
 
     @include respond-from(tablet) {
       grid: auto/ repeat(2, 1fr);
@@ -21,7 +25,9 @@
 
   &__icon-box {
     display: grid;
-    grid: "boxesImg boxesTitle" ". boxesDesc";
+    grid:
+      "boxesImg boxesTitle"
+      ". boxesDesc" / auto 1fr;
     gap: 0 20px;
 
     @include respond-from(tablet) {
