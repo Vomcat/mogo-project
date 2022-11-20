@@ -7,6 +7,9 @@
   font-weight: 700;
   transition: all 0.3s;
   cursor: pointer;
+  border: 2px solid $color-white;
+  font-size: 12px;
+  padding: 10px 20px;
 
   @include respond-from(laptop) {
     font-size: 14px;
@@ -14,7 +17,6 @@
   }
 
   &--primary {
-    border: 2px solid $color-white;
     background-color: transparent;
 
     &:hover {
@@ -25,5 +27,11 @@
 
   &--secondary {
     background-color: $color-quaternary;
+    border-color: $color-quaternary;
+
+    &:hover {
+      background-color: transparent;
+      color: $color-quaternary;
+    }
   }
 }
