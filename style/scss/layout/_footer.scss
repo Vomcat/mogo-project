@@ -26,23 +26,13 @@
     }
   }
 
-  &__subscirbe-form {
-    @include respond-from(laptop) {
-      width: 380px;
-    }
-  }
-
   &__input-wrapper {
     display: flex;
     background-color: $color-white;
   }
 
   &__input {
-    outline: none;
     border: 1px solid $color-grey-light;
-    font-family: $font-family-secondary;
-    color: $color-grey-light;
-    flex-grow: 1;
     padding: 0 10px;
 
     @include respond-from(laptop) {
@@ -52,6 +42,7 @@
     &::placeholder {
       font-family: inherit;
       color: $color-grey-light;
+      font-style: italic;
     }
   }
 }
