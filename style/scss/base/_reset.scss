@@ -118,3 +118,8 @@ input {
   font-family: $font-family-secondary;
   color: $color-grey-light;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+}
