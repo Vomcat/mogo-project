@@ -1,3 +1,52 @@
 .services {
   grid-area: services;
+
+  &__icon-boxes {
+    display: grid;
+    grid: auto / 1fr;
+    gap: 30px;
+
+    @include respond-from(tablet) {
+      grid: auto/ repeat(2, 1fr);
+      gap: 45px 35px;
+      padding: 0 15px;
+    }
+
+    @include respond-from(laptop) {
+      grid: repeat(2, 1fr) / repeat(3, 1fr);
+      gap: 95px 65px;
+      padding: 0 25px;
+    }
+  }
+
+  &__icon-box {
+    display: grid;
+    grid: "boxesImg boxesTitle" ". boxesDesc";
+    gap: 0 20px;
+
+    @include respond-from(tablet) {
+      gap: 10 20px;
+    }
+
+    @include respond-from(laptop) {
+      gap: 0 30px;
+    }
+
+    .title-p {
+      grid-area: boxesTitle;
+    }
+  }
+
+  &__icon-box-img {
+    grid-area: boxesImg;
+    height: 25px;
+
+    @include respond-from(tablet) {
+      height: 30px;
+    }
+  }
+
+  &__icon-box-desc {
+    grid-area: boxesDesc;
+  }
 }
