@@ -1,16 +1,12 @@
-h1,
-h2 {
-  color: $color-white;
-}
-
 h1 {
   font-family: $font-family-primary;
   font-weight: 700;
-  text-transform: uppercase;
   font-size: 40px;
+  color: $color-white;
+  text-transform: uppercase;
 
   @include respond-from(tablet) {
-    font-size: 70px;
+    font-size: 100px;
   }
 
   @include respond-from(laptop) {
@@ -19,29 +15,18 @@ h1 {
 }
 
 h2 {
-  font-family: $font-family-tertiary;
+  font-family: $font-family-primary;
+  font-weight: 700;
   font-size: 23px;
+  color: $font-color-primary-dark;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 25px;
 
   @include respond-from(tablet) {
-    font-size: 43px;
-  }
-
-  @include respond-from(laptop) {
-    font-size: 77px;
-  }
-}
-
-h3 {
-  font-family: $font-family-primary;
-
-  @include respond-from(laptop) {
     font-size: 30px;
+    padding-bottom: 40px;
   }
-}
-
-h4 {
-  font-family: $font-family-primary;
-  color: $font-color-primary-dark;
 }
 
 p {
@@ -57,4 +42,65 @@ p {
   font-size: 14px;
   text-transform: uppercase;
   line-height: 1;
+}
+
+.subtitle {
+  display: block;
+  font-family: $font-family-tertiary;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
+  line-height: 1;
+
+  &--light {
+    color: $color-white;
+  }
+
+  &--dark {
+    color: $font-color-primary-dark;
+  }
+
+  &--big {
+    font-size: 27px;
+    padding-bottom: 15px;
+
+    @include respond-from(tablet) {
+      font-size: 43px;
+      padding-bottom: 24px;
+    }
+    @include respond-from(laptop) {
+      font-size: 72px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &--small {
+    font-size: 23px;
+    padding-bottom: 15px;
+
+    @include respond-from(laptop) {
+      font-size: 24px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.underline {
+  position: relative;
+  margin-bottom: 20px;
+
+  @include respond-from(laptop) {
+    margin-bottom: 25px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $color-primary;
+    width: 60px;
+    height: 3px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
 }
