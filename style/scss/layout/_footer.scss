@@ -6,12 +6,17 @@
   justify-content: center;
   padding-bottom: 12px;
 
+  @include respond-to(laptop) {
+    gap: 12px;
+  }
+
   @include respond-from(laptop) {
     flex-direction: row;
     justify-content: space-between;
   }
 
   p {
+    color: $font-color-primary-dark;
     a {
       color: $color-primary;
       transition: 0.9s;
@@ -19,30 +24,6 @@
       &:hover {
         color: darken($color-primary, 30%);
       }
-    }
-
-    @include respond-to(laptop) {
-      margin-bottom: 12px;
-    }
-  }
-
-  &__input-wrapper {
-    display: flex;
-    background-color: $color-white;
-  }
-
-  &__input {
-    border: 1px solid $color-grey-light;
-    padding: 0 10px;
-
-    @include respond-from(laptop) {
-      padding: 0 12px;
-    }
-
-    &::placeholder {
-      font-family: inherit;
-      color: $color-grey-light;
-      font-style: italic;
     }
   }
 }

@@ -1,0 +1,21 @@
+.form {
+  &__input-wrapper {
+    display: flex;
+    background-color: $color-white;
+  }
+
+  &__input {
+    border: 1px solid $color-grey-light;
+    padding: 0 10px;
+
+    @include respond-from(laptop) {
+      padding: 0 12px;
+    }
+
+    &::placeholder {
+      font-family: inherit;
+      color: $color-grey-light;
+      font-style: italic;
+    }
+  }
+}
