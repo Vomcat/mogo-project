@@ -7,6 +7,10 @@
     @media (min-width: $breakpoint-tablet) {
       @content;
     }
+  } @else if $size == tablet-xl {
+    @media (min-width: $breakpoint-tablet-xl) {
+      @content;
+    }
   } @else if $size == laptop {
     @media (min-width: $breakpoint-laptop) {
       @content;
