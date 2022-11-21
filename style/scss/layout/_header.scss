@@ -6,7 +6,7 @@
   background-size: cover;
   background-position: top center;
   z-index: 1;
-  padding: 60px 0;
+  padding: 110px 0 80px;
 
   @include respond-from(tablet) {
     background-position: top left;
@@ -31,26 +31,14 @@
   &__wrapper {
     text-align: center;
     margin-inline: auto;
-    max-width: 230px;
+    max-width: 300px;
 
     @include respond-from(tablet) {
-      max-width: 390px;
+      max-width: 590px;
     }
 
     @include respond-from(laptop) {
       max-width: 830px;
-    }
-
-    h2 {
-      padding-bottom: 10px;
-
-      @include respond-from(tablet) {
-        padding-bottom: 20px;
-      }
-
-      @include respond-from(laptop) {
-        padding-bottom: 40px;
-      }
     }
   }
 
