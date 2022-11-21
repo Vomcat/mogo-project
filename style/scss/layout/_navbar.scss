@@ -75,6 +75,27 @@
     @include respond-from(laptop) {
       gap: 57px;
     }
+
+    &--icons {
+      grid-area: icons;
+      flex-direction: row;
+      justify-content: center;
+      align-items: baseline;
+      gap: 20px;
+
+      @include respond-from(tablet-xl) {
+        gap: 24px;
+        margin-left: 50px;
+      }
+
+      @include respond-from(laptop) {
+        gap: 38px;
+      }
+
+      img {
+        height: 15px;
+      }
+    }
   }
 
   &__link {
@@ -114,37 +135,6 @@
       transform-origin: 100% 50%;
       transform: scale3d(0, 1, 1);
       transition: transform 0.3s;
-    }
-  }
-
-  &__icons {
-    grid-area: icons;
-    display: none;
-    justify-content: center;
-    align-items: baseline;
-    gap: 20px;
-
-    @include respond-from(tablet-xl) {
-      display: flex;
-      gap: 24px;
-      margin-left: 50px;
-    }
-
-    @include respond-from(laptop) {
-      gap: 38px;
-    }
-  }
-
-  &__icon {
-    cursor: pointer;
-
-    img {
-      height: 15px;
-      transition: 0.4s;
-
-      &:hover {
-        transform: scale(1.2);
-      }
     }
   }
 

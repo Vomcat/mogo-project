@@ -316,6 +316,27 @@ p {
     gap: 57px;
   }
 }
+.navbar__list--icons {
+  grid-area: icons;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  gap: 20px;
+}
+@media (min-width: 920px) {
+  .navbar__list--icons {
+    gap: 24px;
+    margin-left: 50px;
+  }
+}
+@media (min-width: 1220px) {
+  .navbar__list--icons {
+    gap: 38px;
+  }
+}
+.navbar__list--icons img {
+  height: 15px;
+}
 .navbar__link {
   position: relative;
   display: inline-block;
@@ -353,35 +374,6 @@ p {
   transform-origin: 100% 50%;
   transform: scale3d(0, 1, 1);
   transition: transform 0.3s;
-}
-.navbar__icons {
-  grid-area: icons;
-  display: none;
-  justify-content: center;
-  align-items: baseline;
-  gap: 20px;
-}
-@media (min-width: 920px) {
-  .navbar__icons {
-    display: flex;
-    gap: 24px;
-    margin-left: 50px;
-  }
-}
-@media (min-width: 1220px) {
-  .navbar__icons {
-    gap: 38px;
-  }
-}
-.navbar__icon {
-  cursor: pointer;
-}
-.navbar__icon img {
-  height: 15px;
-  transition: 0.4s;
-}
-.navbar__icon img:hover {
-  transform: scale(1.2);
 }
 .navbar__hamburger {
   grid-area: hamburger;
