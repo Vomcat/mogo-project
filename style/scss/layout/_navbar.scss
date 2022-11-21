@@ -64,10 +64,16 @@
     display: none;
     text-align: center;
     flex-direction: column;
+    gap: 7px;
 
     @include respond-from(tablet-xl) {
       display: flex;
       flex-direction: row;
+      gap: 30px;
+    }
+
+    @include respond-from(laptop) {
+      gap: 57px;
     }
   }
 
@@ -80,17 +86,11 @@
     transition: 0.3s;
     padding-bottom: 7px;
 
-    @include respond-to(tablet) {
-      margin-bottom: 15px;
-    }
-
     @include respond-from(tablet) {
-      margin-right: 30px;
       padding-bottom: 12px;
     }
 
     @include respond-from(laptop) {
-      margin-right: 57px;
       padding-bottom: 12px;
     }
 
@@ -122,26 +122,29 @@
     display: none;
     justify-content: center;
     align-items: baseline;
+    gap: 20px;
 
     @include respond-from(tablet-xl) {
       display: flex;
+      gap: 24px;
+      margin-left: 50px;
+    }
+
+    @include respond-from(laptop) {
+      gap: 38px;
     }
   }
 
   &__icon {
-    height: 15px;
     cursor: pointer;
 
-    @include respond-from(tablet) {
-      margin-right: 24px;
-    }
+    img {
+      height: 15px;
+      transition: 0.4s;
 
-    @include respond-from(laptop) {
-      margin-right: 38px;
-    }
-
-    &:last-of-type() {
-      margin-right: 0;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 
@@ -167,7 +170,7 @@
       display: block;
       height: 1px;
       margin: 5px 0;
-      transition: all 0.8s ease-in-out;
+      transition: all 0.4s ease-in-out;
     }
   }
 }
