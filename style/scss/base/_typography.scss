@@ -38,10 +38,14 @@ p {
 
 .title-p {
   font-family: $font-family-primary;
-  color: $font-color-primary-dark;
+  font-weight: 700;
   font-size: 14px;
-  text-transform: uppercase;
+  color: $font-color-primary-dark;
   line-height: 1;
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
 }
 
 .subtitle {
