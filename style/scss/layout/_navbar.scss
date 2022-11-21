@@ -1,0 +1,173 @@
+.navbar {
+  grid-area: navbar;
+  background-color: transparent;
+  z-index: 2;
+  height: 68px;
+  padding-top: 15px;
+  display: grid;
+  grid:
+    "logo hamburger"
+    "list list"
+    "icons icons" 1fr / 1fr;
+
+  @include respond-from(tablet-xl) {
+    grid: "logo . list icons" auto / auto 1fr auto auto;
+    padding-top: 30px;
+  }
+
+  &::before {
+    content: "";
+    display: none;
+    background: $gradient-main;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &--mobile-active {
+    height: 100vh;
+
+    &::before {
+      display: block;
+    }
+    .navbar__list {
+      display: flex;
+    }
+    .navbar__icons {
+      display: flex;
+    }
+    .navbar__hamburger-icon {
+      > div {
+        transform: scale(0);
+      }
+
+      &::after {
+        transform: translateY(-6px) rotate(-135deg);
+      }
+
+      &::before {
+        transform: translateY(6px) rotate(135deg);
+      }
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+    cursor: pointer;
+  }
+
+  &__list {
+    grid-area: list;
+    display: none;
+    text-align: center;
+    flex-direction: column;
+
+    @include respond-from(tablet-xl) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    color: $color-white;
+    text-transform: uppercase;
+    font-family: $font-family-primary;
+    transition: 0.3s;
+    padding-bottom: 7px;
+
+    @include respond-to(tablet) {
+      margin-bottom: 15px;
+    }
+
+    @include respond-from(tablet) {
+      margin-right: 30px;
+      padding-bottom: 12px;
+    }
+
+    @include respond-from(laptop) {
+      margin-right: 57px;
+      padding-bottom: 12px;
+    }
+
+    &:hover {
+      color: $color-secondary;
+
+      &::before {
+        transform-origin: 0% 50%;
+        transform: scale3d(1, 1, 1);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: $color-secondary;
+      top: 100%;
+      left: 0;
+      transform-origin: 100% 50%;
+      transform: scale3d(0, 1, 1);
+      transition: transform 0.3s;
+    }
+  }
+
+  &__icons {
+    grid-area: icons;
+    display: none;
+    justify-content: center;
+    align-items: baseline;
+
+    @include respond-from(tablet-xl) {
+      display: flex;
+    }
+  }
+
+  &__icon {
+    height: 15px;
+    cursor: pointer;
+
+    @include respond-from(tablet) {
+      margin-right: 24px;
+    }
+
+    @include respond-from(laptop) {
+      margin-right: 38px;
+    }
+
+    &:last-of-type() {
+      margin-right: 0;
+    }
+  }
+
+  &__hamburger {
+    grid-area: hamburger;
+    display: block;
+    cursor: pointer;
+    z-index: 1;
+
+    @include respond-from(tablet-xl) {
+      display: none;
+    }
+  }
+
+  &__hamburger-icon {
+    width: 28px;
+
+    > div,
+    &::after,
+    &::before {
+      background-color: $color-white;
+      content: "";
+      display: block;
+      height: 1px;
+      margin: 5px 0;
+      transition: all 0.8s ease-in-out;
+    }
+  }
+}
