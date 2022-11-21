@@ -4,7 +4,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 12px;
+  padding: 10px 0 12px;
+  border-top: 1px solid $color-grey-light;
 
   @include respond-to(laptop) {
     gap: 12px;
@@ -15,8 +16,7 @@
     justify-content: space-between;
   }
 
-  p {
-    color: $font-color-primary-dark;
+  .title-p {
     a {
       color: $color-primary;
       transition: 0.9s;
