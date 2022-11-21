@@ -5,6 +5,7 @@
     display: grid;
     grid: auto / auto;
     gap: 30px;
+    padding: 20px 0;
 
     @include respond-to(tablet) {
       justify-content: center;
@@ -13,13 +14,13 @@
     @include respond-from(tablet) {
       grid: auto/ repeat(2, 1fr);
       gap: 45px 35px;
-      padding: 0 15px;
+      padding: 30px 15px 20px;
     }
 
     @include respond-from(laptop) {
       grid: repeat(2, 1fr) / repeat(3, 1fr);
       gap: 95px 65px;
-      padding: 0 25px;
+      padding: 40px 25px 20px;
     }
   }
 
