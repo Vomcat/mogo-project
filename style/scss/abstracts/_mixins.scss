@@ -31,6 +31,10 @@
     @media (max-width: #{$breakpoint-tablet - 1px}) {
       @content;
     }
+  } @else if $size == tablet-xl {
+    @media (max-width: #{$breakpoint-tablet-xl - 1px}) {
+      @content;
+    }
   } @else if $size == laptop {
     @media (max-width: #{$breakpoint-laptop - 1px}) {
       @content;

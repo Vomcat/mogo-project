@@ -618,6 +618,7 @@ p {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 1px;
   opacity: 0;
   transition: opacity 0.4s ease-out;
 }
@@ -628,10 +629,6 @@ p {
   justify-content: center;
   width: 56px;
   height: 56px;
-  margin-right: 1px;
-}
-.image-boxes__link:last-of-type {
-  margin-right: 0;
 }
 .image-boxes__link:hover {
   background-color: #f38181;

@@ -77,6 +77,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 1px;
     opacity: 0;
     transition: opacity 0.4s ease-out;
   }
@@ -88,11 +89,6 @@
     justify-content: center;
     width: 56px;
     height: 56px;
-    margin-right: 1px;
-
-    &:last-of-type {
-      margin-right: 0;
-    }
 
     &:hover {
       background-color: $color-primary;
