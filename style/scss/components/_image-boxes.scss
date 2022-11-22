@@ -17,7 +17,7 @@
     text-align: center;
 
     @include respond-from(tablet) {
-      max-width: 350px;
+      max-width: 290px;
     }
 
     @include respond-from(laptop) {
