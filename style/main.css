@@ -562,7 +562,7 @@ p {
 }
 @media (min-width: 768px) {
   .image-boxes__box-wrapper {
-    max-width: 350px;
+    max-width: 290px;
   }
 }
 @media (min-width: 1220px) {
